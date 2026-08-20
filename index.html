@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Neon Runner 3D</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="brand">NEON RUNNER</div>
+    <div class="stats">
+      <span>SCORE <b id="score">0</b></span>
+      <span>COINS <b id="coins">0</b></span>
+      <span>BEST <b id="best">0</b></span>
+    </div>
+  </div>
+
+  <div id="message" class="panel">
+    <h1>NEON RUNNER 3D</h1>
+    <p>Dodge the blocks. Collect the energy orbs.</p>
+    <p class="controls">← → / A D to move · Space to dash</p>
+    <button id="startBtn">START RUN</button>
+  </div>
+
+  <div id="gameOver" class="panel hidden">
+    <h1>RUN OVER</h1>
+    <p>Score <strong id="finalScore">0</strong></p>
+    <button id="restartBtn">RUN AGAIN</button>
+  </div>
+
+  <div id="touchControls" aria-label="Touch controls">
+    <button data-dir="left">◀</button>
+    <button data-dir="dash">◆</button>
+    <button data-dir="right">▶</button>
+  </div>
+
+  <canvas id="game"></canvas>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
